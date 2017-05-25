@@ -18,17 +18,18 @@ define(["dojo/topic"], function(topic) {
 
 	function carousel() {
 		
-		//for testing, set to cycle through slideshow only 10x
-		if ( i<1000 ) {
+		//for testing, set to cycle through slideshow only 1000x
+		if ( i> 1000 ) {
 			console.log(i);
-			setTimeout(carousel, 5000);
+			setTimeout(carousel, 9000);
+			//setTimeout(carousel, 2000); //shorten for testing
 			i=i+1;
 		}
 		slideNext = slideIndex+1;
 		if (slideNext > x.length-1) {slideNext = 0}
 
 		app.ui.mainStage.beforeMainMediaUpdate(slideNext);
-		app.ui.mainStage.updateMainMediaWithStoryMainMedia(slideNext)
+		app.ui.mainStage.updateMainMediaWithStoryMainMedia(slideNext);
 		//x[slideIndex].className = "mainMediaContainer";
 		//x[slideNext].className = "mainMediaContainer active";
 
