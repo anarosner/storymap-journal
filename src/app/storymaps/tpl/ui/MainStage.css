@@ -35,17 +35,29 @@
     opacity: 0;
     -webkit-overflow-scrolling: touch;
 	overflow-y: auto;
+	-webkit-animation: fadeout 1s;
+	-moz-animation: fadeout 1s;
+	-ms-animation: fadeout 1s;
+	-o-animation: fadeout 1s;
+	animation: fadeout 1s;
 }
 
 .mainMediaContainer.active {
 	display: block !important;
 	z-index: 1;
 	visibility: visible;
+	
 	-webkit-animation: fadein 1s;
 	-moz-animation: fadein 1s;
 	-ms-animation: fadein 1s;
 	-o-animation: fadein 1s;
 	animation: fadein 1s;
+
+	/*-webkit-transition: all 4s ease-out 0s;
+	-moz-transition: all 4s ease-out 0s;
+	-ms-transition: all 4s ease-out 0s;
+	-o-transition: all 4s ease-out 0s;
+	transition: all 4s ease-out 0s;*/
 	-webkit-animation-fill-mode:forwards;
     -moz-animation-fill-mode:forwards;
 	animation-fill-mode:forwards;
