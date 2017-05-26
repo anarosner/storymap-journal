@@ -14,17 +14,18 @@ define(["dojo/topic"], function(topic) {
 	var slideIndex = 0;
 	var x = document.getElementsByClassName("mainMediaContainer");
 
-	var i = 0;
+	//var i = 0;
 
 	function carousel() {
 		
-		//for testing, set to cycle through slideshow only 1000x
-		if ( i> 1000 ) {
+		
+		setTimeout(carousel, 9000);
+		/* //for testing, set to cycle through slideshow only 1000x
+		if ( i<1000 ) {
 			console.log(i);
-			setTimeout(carousel, 9000);
 			//setTimeout(carousel, 2000); //shorten for testing
 			i=i+1;
-		}
+		}*/
 		slideNext = slideIndex+1;
 		if (slideNext > x.length-1) {slideNext = 0}
 
