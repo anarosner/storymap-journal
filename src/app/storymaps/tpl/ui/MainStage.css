@@ -1,10 +1,9 @@
 #mainStagePanel {
-    position: relative;
-   /* background-size: 100% 100%;
+     position: relative;
+    background-size: 100% 100%;
 	-webkit-box-shadow: inset 0px 0px 82px 19px rgba(0,0,0,0.3);
 	-moz-box-shadow: inset 0px 0px 82px 19px rgba(0,0,0,0.3);
-	box-shadow: inset 0px 0px 82px 19px rgba(0,0,0,0.3);*/
-	background-color: black !important;
+	box-shadow: inset 0px 0px 82px 19px rgba(0,0,0,0.3);
 }
 
 #mainStagePanelInner {
@@ -36,21 +35,17 @@
     opacity: 0;
     -webkit-overflow-scrolling: touch;
 	overflow-y: auto;
-
 }
 
 .mainMediaContainer.active {
 	display: block !important;
 	z-index: 1;
 	visibility: visible;
-	opacity: 1;
-	-webkit-animation: fadeoutin 6s;
-	-moz-animation: fadeoutin 6s;
-	-ms-animation: fadeoutin 6s;
-	-o-animation: fadeoutin 6s;
-	animation: fadeoutin 6s;
-
-	
+	-webkit-animation: fadein 1s;
+	-moz-animation: fadein 1s;
+	-ms-animation: fadein 1s;
+	-o-animation: fadein 1s;
+	animation: fadein 1s;
 	-webkit-animation-fill-mode:forwards;
     -moz-animation-fill-mode:forwards;
 	animation-fill-mode:forwards;
