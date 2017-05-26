@@ -1,9 +1,40 @@
+// customize for slideshow
+@keyframes fadeoutin { 
+  0%   { opacity:0; }
+  25%  { opacity:.1; }
+  50%  { opacity:1; }
+  75%  { opacity:.1; }
+  100% { opacity:0; }
+}
+@-moz-keyframes fadeoutin {
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+}
+@-webkit-keyframes fadeoutin { 
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+}
+@-ms-keyframes fadeoutin { 
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+}
+@-o-keyframes fadeoutin { 
+  0%   { opacity:0; }
+  20%  { opacity:1; }
+  100% { opacity:0; }
+}
+
+
 #mainStagePanel {
-     position: relative;
-    background-size: 100% 100%;
+    position: relative;
+   /* background-size: 100% 100%;
 	-webkit-box-shadow: inset 0px 0px 82px 19px rgba(0,0,0,0.3);
 	-moz-box-shadow: inset 0px 0px 82px 19px rgba(0,0,0,0.3);
-	box-shadow: inset 0px 0px 82px 19px rgba(0,0,0,0.3);
+	box-shadow: inset 0px 0px 82px 19px rgba(0,0,0,0.3);*/
+	background-color: black !important;
 }
 
 #mainStagePanelInner {
@@ -35,29 +66,21 @@
     opacity: 0;
     -webkit-overflow-scrolling: touch;
 	overflow-y: auto;
-	-webkit-animation: fadeout 1s;
-	-moz-animation: fadeout 1s;
-	-ms-animation: fadeout 1s;
-	-o-animation: fadeout 1s;
-	animation: fadeout 1s;
+
 }
 
 .mainMediaContainer.active {
 	display: block !important;
 	z-index: 1;
 	visibility: visible;
-	
-	-webkit-animation: fadein 1s;
-	-moz-animation: fadein 1s;
-	-ms-animation: fadein 1s;
-	-o-animation: fadein 1s;
-	animation: fadein 1s;
+	opacity: 1;
+	-webkit-animation: fadeoutin 6s;
+	-moz-animation: fadeoutin 6s;
+	-ms-animation: fadeoutin 6s;
+	-o-animation: fadeoutin 6s;
+	animation: fadeoutin 6s;
 
-	/*-webkit-transition: all 4s ease-out 0s;
-	-moz-transition: all 4s ease-out 0s;
-	-ms-transition: all 4s ease-out 0s;
-	-o-transition: all 4s ease-out 0s;
-	transition: all 4s ease-out 0s;*/
+	
 	-webkit-animation-fill-mode:forwards;
     -moz-animation-fill-mode:forwards;
 	animation-fill-mode:forwards;
