@@ -1748,29 +1748,36 @@ var Swiper = function (selector, params) {
         Swipe Functions
     ====================================================*/
     _this.swipeNext = function (internal) {
-        if (!internal && params.loop) _this.fixLoop();
-        if (!internal && params.autoplay) _this.stopAutoplay(true);
-        _this.callPlugins('onSwipeNext');
-        var currentPosition = _this.getWrapperTranslate();
-        var newPosition = currentPosition;
-        if (params.slidesPerView === 'auto') {
-            for (var i = 0; i < _this.snapGrid.length; i++) {
-                if (-currentPosition >= _this.snapGrid[i] && -currentPosition < _this.snapGrid[i + 1]) {
-                    newPosition = -_this.snapGrid[i + 1];
-                    break;
-                }
-            }
-        }
-        else {
-            var groupSize = slideSize * params.slidesPerGroup;
-            newPosition = -(Math.floor(Math.abs(currentPosition) / Math.floor(groupSize)) * groupSize + groupSize);
-        }
-        if (newPosition < -maxWrapperPosition()) {
-            newPosition = -maxWrapperPosition();
-        }
-        if (newPosition === currentPosition) return false;
-        swipeToPosition(newPosition, 'next');
-        return true;
+		
+		if (!app.isInBuilder) {
+			console.log("override keyboard enabling for slideshow");
+		}
+		else {
+			
+			if (!internal && params.loop) _this.fixLoop();
+			if (!internal && params.autoplay) _this.stopAutoplay(true);
+			_this.callPlugins('onSwipeNext');
+			var currentPosition = _this.getWrapperTranslate();
+			var newPosition = currentPosition;
+			if (params.slidesPerView === 'auto') {
+				for (var i = 0; i < _this.snapGrid.length; i++) {
+					if (-currentPosition >= _this.snapGrid[i] && -currentPosition < _this.snapGrid[i + 1]) {
+						newPosition = -_this.snapGrid[i + 1];
+						break;
+					}
+				}
+			}
+			else {
+				var groupSize = slideSize * params.slidesPerGroup;
+				newPosition = -(Math.floor(Math.abs(currentPosition) / Math.floor(groupSize)) * groupSize + groupSize);
+			}
+			if (newPosition < -maxWrapperPosition()) {
+				newPosition = -maxWrapperPosition();
+			}
+			if (newPosition === currentPosition) return false;
+			swipeToPosition(newPosition, 'next');
+			return true;
+		}
     };
     _this.swipePrev = function (internal) {
         if (!internal && params.loop) _this.fixLoop();
