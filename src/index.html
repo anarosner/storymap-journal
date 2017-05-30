@@ -38,7 +38,7 @@
 			//-------------------------------------------------------------------------------------------
 			var configOptions = {
 				// Enter an application ID created through the Map Journal builder
-				appid: "e4bb5e409a004651b3dd44a77486804c",
+				appid: "", //"e4bb5e409a004651b3dd44a77486804c",
 				// Optionally to secure Journal's access, use an OAuth application ID (example: 6gyOg377fLUhUk6f)
 				// User will need to sign-in to access the viewer even if your application is public
 				oAuthAppId: "", //G1cPKJukkANDTfho
@@ -90,9 +90,9 @@
 			/*  fade in and fade out settings for background slideshow */
 			@keyframes fadeoutin { 
 			  0%   { opacity:0; }
-			  49%  { opacity:.99; }
+			  30%  { opacity:.99; }
 			  50%  { opacity:1; }
-			  51%  { opacity:.99; }
+			  90%  { opacity:.99; }
 			  100% { opacity:0; }
 			}
 			@-moz-keyframes fadeoutin {
@@ -111,9 +111,9 @@
 			}
 			@-ms-keyframes fadeoutin { 
 			  0%   { opacity:0; }
-			  49%  { opacity:.99; }
+			  10%  { opacity:.99; }
 			  50%  { opacity:1; }
-			  51%  { opacity:.99; }
+			  90%  { opacity:.99; }
 			  100% { opacity:0; }
 			}
 			@-o-keyframes fadeoutin { 
@@ -124,17 +124,19 @@
 			  100% { opacity:0; }
 			}
 			.mainMediaContainer.active {
-				-webkit-animation: fadeoutin 9s;
-				-moz-animation: fadeoutin 9s;
-				-ms-animation: fadeoutin 9s;
-				-o-animation: fadeoutin 9s;
-				animation: fadeoutin 9s;
+				-webkit-animation: fadeoutin 9.5s !important;
+				-moz-animation: fadeoutin 9.5s !important;
+				-ms-animation: fadeoutin 9.5s !important;
+				-o-animation: fadeoutin 9.5s !important;
+				animation: fadeoutin 9.5s !important;
 			}
-	
-			-webkit-animation-fill-mode:forwards;
-			-moz-animation-fill-mode:forwards;
-			animation-fill-mode:forwards;
-}
+			#mainStagePanel {
+				-webkit-box-shadow: none !important;
+				-moz-box-shadow: none !important;
+				box-shadow: none !important;
+				box-shadow: none !important;
+				background-color: black !important;
+			}
 			
 		</style>
 
